@@ -1,16 +1,31 @@
-# clgrep
+<div align="center">
+  <h1>clgrep</h1>
+  <p><strong>Search through your Claude Code conversation history</strong></p>
+
+  ![License](https://img.shields.io/github/license/melvincarvalho/clgrep?style=flat-square)
+  ![Version](https://img.shields.io/badge/version-0.0.1-blue?style=flat-square)
+  ![Node](https://img.shields.io/badge/node-%3E%3D14-green?style=flat-square)
+  ![GitHub Stars](https://img.shields.io/github/stars/melvincarvalho/clgrep?style=flat-square)
+  ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
+
+</div>
+
+---
 
 **"Wait, didn't I already solve this with Claude?"**
 
-Search your entire Claude Code history instantly. Find that mass prompt, solution, or conversation you know you had somewhere.
+Search your entire Claude Code history instantly. Find that prompt, solution, or conversation you know you had somewhere.
+
+## Quick Start
 
 ```bash
 npm install -g clgrep
+clgrep "webpack"
 ```
 
 ## The Problem
 
-You've been using Claude Code for weeks. You *know* you solved a similar problem before. You *know* you had a great conversation about webpack configs, or that regex pattern, or that API design. But where?
+You've been using Claude Code for weeks. You *know* you solved a similar problem before. But where?
 
 Your `~/.claude` folder has hundreds of conversation files. Good luck finding anything.
 
@@ -32,7 +47,6 @@ clgrep "webpack"
 ───────────────────────────────────────
 session: a1b2c3d4-e5f6-7890
     cwd: /home/user/myproject
-   file: projects/-home-user-myproject/a1b2c3d4.jsonl
 
   [2024-12-15 14:32] (user)
     how do I configure webpack to handle SVG imports...
@@ -44,13 +58,13 @@ Found 42 matches
 
 ## Features
 
-- **Instant search** across all your Claude Code conversations
-- **Zero dependencies** - just Node.js builtins
-- **Color-coded output** - timestamps, roles, and matches highlighted
-- **Full context** - see the project directory, session ID, and timestamps
-- **Finds both** your prompts AND Claude's responses
+- **Instant search** - Scans all Claude Code conversations
+- **Zero dependencies** - Just Node.js builtins
+- **Color-coded output** - Timestamps, roles, and matches highlighted
+- **Full context** - Project directory, session ID, timestamps
+- **Comprehensive** - Searches both your prompts AND Claude's responses
 
-## Install
+## Installation
 
 ```bash
 npm install -g clgrep
@@ -73,36 +87,27 @@ clgrep "regex"
 
 # Find conversations in a specific project
 clgrep "myproject"
-
-# Case-insensitive by default
-clgrep "React"
 ```
 
 ## How It Works
 
-Claude Code stores your conversation history in `~/.claude/`:
+Claude Code stores conversation history in `~/.claude/`:
 
-- `history.jsonl` - Your prompt history
-- `projects/*//*.jsonl` - Full conversation logs per session
+| File | Contains |
+|------|----------|
+| `history.jsonl` | Your prompt history |
+| `projects/*/*.jsonl` | Full conversation logs per session |
 
-`clgrep` searches through all of these files and presents results with full context.
+`clgrep` searches through all of these and presents results with full context.
 
 ## Requirements
 
 - Node.js >= 14
-- Claude Code (obviously)
+- Claude Code installed
 
-## Why "clgrep"?
+## Pro Tip
 
-`cl` (Claude) + `grep` (the OG search tool) = `clgrep`
-
-## License
-
-AGPL-3.0
-
----
-
-**Pro tip:** Alias it in your shell:
+Add an alias to your shell:
 
 ```bash
 alias cg="clgrep"
@@ -110,6 +115,16 @@ alias cg="clgrep"
 
 Then just: `cg "that thing I asked about"`
 
+## Contributing
+
+Contributions welcome! Feel free to open issues or submit PRs.
+
+## License
+
+AGPL-3.0 - see [LICENSE](LICENSE) for details.
+
 ---
 
-Made for developers who talk to Claude more than their coworkers.
+<div align="center">
+  <p>Made for developers who talk to Claude more than their coworkers.</p>
+</div>

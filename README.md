@@ -3,8 +3,8 @@
   <p><strong>Search through your Claude Code conversation history</strong></p>
 
   ![License](https://img.shields.io/github/license/melvincarvalho/clgrep?style=flat-square)
-  ![Version](https://img.shields.io/badge/version-0.0.1-blue?style=flat-square)
-  ![Node](https://img.shields.io/badge/node-%3E%3D14-green?style=flat-square)
+  ![Version](https://img.shields.io/github/package-json/v/melvincarvalho/clgrep?style=flat-square)
+  ![Node](https://img.shields.io/badge/node-%3E%3D18-green?style=flat-square)
   ![GitHub Stars](https://img.shields.io/github/stars/melvincarvalho/clgrep?style=flat-square)
   ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
 
@@ -63,6 +63,8 @@ Found 42 matches
 - **Color-coded output** - Timestamps, roles, and matches highlighted
 - **Full context** - Project directory, session ID, timestamps
 - **Comprehensive** - Searches both your prompts AND Claude's responses
+- **Signal, not noise** - Matches actual message text, not raw JSON, tool output, or file snapshots
+- **Newest at the bottom** - Most recent prompts and sessions right above your cursor
 
 ## Installation
 
@@ -82,12 +84,18 @@ npx clgrep "your search term"
 # Find all conversations about authentication
 clgrep "auth"
 
-# Find that regex you wrote
-clgrep "regex"
+# Multi-word queries work with or without quotes
+clgrep webpack svg imports
 
-# Find conversations in a specific project
-clgrep "myproject"
+# Case-sensitive matching
+clgrep -s "MyClass"
+
+# Help and version
+clgrep --help
+clgrep --version
 ```
+
+Exit codes follow grep conventions: `0` when matches are found, `1` when none, `2` on usage or runtime errors.
 
 ## How It Works
 
@@ -102,7 +110,7 @@ Claude Code stores conversation history in `~/.claude/`:
 
 ## Requirements
 
-- Node.js >= 14
+- Node.js >= 18
 - Claude Code installed
 
 ## Pro Tip

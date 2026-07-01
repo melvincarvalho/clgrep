@@ -1,10 +1,17 @@
 {
   "name": "clgrep",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Search through Claude Code conversation history",
   "main": "index.js",
   "bin": {
     "clgrep": "./bin/clgrep.js"
+  },
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node --test"
   },
   "keywords": [
     "claude",
@@ -21,7 +28,7 @@
     "url": "https://github.com/melvincarvalho/clgrep"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "type": "module"
 }

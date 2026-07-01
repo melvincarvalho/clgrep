@@ -1,0 +1,4 @@
+{"type":"user","cwd":"/home/user/demo","sessionId":"abc123","timestamp":"2024-12-15T14:32:00.000Z","message":{"role":"user","content":"how do I configure webpack to handle SVG imports"}}
+{"type":"assistant","cwd":"/home/user/demo","sessionId":"abc123","timestamp":"2024-12-15T14:32:30.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Add a webpack rule using svgr to handle SVG imports."}]}}
+{"type":"assistant","cwd":"/home/user/demo","sessionId":"abc123","timestamp":"2024-12-15T14:33:00.000Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"webpack thinking block should not count as text"},{"type":"text","text":"Databases are unrelated here."}]}}
+{"type":"file-history-snapshot","messageId":"m1","isSnapshotUpdate":false,"snapshot":"module.exports = { webpack: true } // SNAPSHOT_ONLY_TOKEN embedded file contents"}

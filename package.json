@@ -22,7 +22,7 @@
     "grep"
   ],
   "author": "Melvin Carvalho",
-  "license": "AGPL-3.0",
+  "license": "AGPL-3.0-only",
   "repository": {
     "type": "git",
     "url": "https://github.com/melvincarvalho/clgrep"
